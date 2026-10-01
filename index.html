@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <script>(function(){var r=document.documentElement;r.classList.remove('no-js');
 /* la firma: finché main.js non parte la pizza è il disco da stendere, coi lembi aperti; se il codice non arriva, dopo 2,5 s la pagina va allo stato finale */
 try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add('firma-attesa');window.__attesaPizza=setTimeout(function(){r.classList.remove('firma-attesa')},2500)}}catch(e){}})()</script>
@@ -20,15 +21,80 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;1,700;1,800&amp;family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css?v=1">
 <link rel="stylesheet" href="css/styles.css?v=1">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script src="js/main.js?v=1" defer></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"Ristorante Pizzeria DOC","description":"Ristorante pizzeria in Via Lorenteggio 47 a Milano: pizze con pomodoro San Marzano DOP e fiordilatte d'Agerola, carne e pesce.","slogan":"Specialità carne e pesce","url":"https://rotenzark.github.io/pizzeria-doc-lorenteggio/","image":"https://rotenzark.github.io/pizzeria-doc-lorenteggio/img/og.jpg","telephone":"+39 02 3293 8520","servesCuisine":["Pizza","Italiana","Pesce","Carne"],"acceptsReservations":"True","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Via Lorenteggio 47","postalCode":"20146","addressLocality":"Milano","addressRegion":"MI","addressCountry":"IT"},"geo":{"@type":"GeoCoordinates","latitude":45.4528,"longitude":9.146},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"12:00","closes":"15:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"23:00"}],"sameAs":["https://www.instagram.com/doc_ristorante_pizzeria/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"172","bestRating":"5"}}
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Ristorante Pizzeria DOC",
+  "description": "Ristorante pizzeria in Via Lorenteggio 47 a Milano: pizze con pomodoro San Marzano DOP e fiordilatte d'Agerola, carne e pesce.",
+  "slogan": "Specialità carne e pesce",
+  "url": "https://rotenzark.github.io/pizzeria-doc-lorenteggio/",
+  "image": "https://rotenzark.github.io/pizzeria-doc-lorenteggio/img/og.jpg",
+  "telephone": "+39 02 3293 8520",
+  "servesCuisine": [
+    "Pizza",
+    "Italiana",
+    "Pesce",
+    "Carne"
+  ],
+  "acceptsReservations": "True",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Lorenteggio 47",
+    "postalCode": "20146",
+    "addressLocality": "Milano",
+    "addressRegion": "MI",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.4528,
+    "longitude": 9.146
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "12:00",
+      "closes": "15:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "12:00",
+      "closes": "15:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "19:00",
+      "closes": "23:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/doc_ristorante_pizzeria/"
+  ]
+}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -428,7 +494,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
           </div>
           <div class="articolo__margine">
             <div class="mappa reveal">
-              <iframe title="Mappa: Ristorante Pizzeria DOC, Via Lorenteggio 47, Milano" data-i18n-title="o.mappa" src="https://maps.google.com/maps?q=Ristorante%20Pizzeria%20DOC%2C%20Via%20Lorenteggio%2047%2C%20Milano&amp;z=16&amp;output=embed" width="600" height="420" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="mappa-clic" data-mappa-clic style="--mappa-h: 420px"><template><iframe title="Mappa: Ristorante Pizzeria DOC, Via Lorenteggio 47, Milano" data-i18n-title="o.mappa" src="https://maps.google.com/maps?q=Ristorante%20Pizzeria%20DOC%2C%20Via%20Lorenteggio%2047%2C%20Milano&amp;z=16&amp;output=embed" width="600" height="420" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></template><div class="mappa-clic__velo"><a class="mappa-clic__btn" href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante+Pizzeria+DOC+Via+Lorenteggio+47+Milano" target="_blank" rel="noopener">Mostra la mappa</a><p class="mappa-clic__nota">La mappa è di Google: aprendola, Google riceve il tuo indirizzo IP e può usare i suoi cookie.</p></div></div>
             </div>
             <figure class="fig reveal"><button type="button" class="foto" data-full="img/facciata.jpg" aria-label="Ingrandisci la foto" data-i18n-aria="m.ingrandisci"><img src="img/facciata.jpg" width="1600" height="888" alt="La facciata di sera: le insegne luminose RISTORANTE, PIZZERIA e DOC col tricolore, le luci di Natale sui pilastri." data-i18n-alt="a.facciata"></button><figcaption><span class="fig__n">Fig. 9.1</span> <span data-i18n="c.facciata">La facciata, di sera.</span></figcaption></figure>
           </div>
@@ -465,7 +531,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
 <footer class="colophon">
   <p class="colophon__insegna"><span class="insegna__doc">DOC</span> <span class="colophon__spec" data-i18n="m.spec">Specialità carne e pesce</span></p>
   <p class="colophon__dove">Ristorante Pizzeria DOC · Via Lorenteggio 47, 20146 Milano · <a href="tel:+390232938520">02 3293 8520</a> · <a href="https://www.instagram.com/doc_ristorante_pizzeria/" target="_blank" rel="noopener">Instagram</a></p>
-  <p class="colophon__cred" data-i18n="z.cred">Sito dimostrativo realizzato da <a href="https://bespokestud.io" rel="noopener">Bespoke Studio</a> · foto dalla scheda Google (del locale e dei clienti) e dall'Instagram del locale, recensioni da Google, il menu da Deliveroo e Just Eat (settembre 2026). La pizza sulla pala è disegnata.</p>
+  <p class="colophon__cred" data-i18n="z.cred">Sito dimostrativo realizzato da <a href="https://bespokestud.io" rel="noopener">Bespoke Studio</a> · <a href="privacy.html">Privacy</a> · foto dalla scheda Google (del locale e dei clienti) e dall'Instagram del locale, recensioni da Google, il menu da Deliveroo e Just Eat (settembre 2026). La pizza sulla pala è disegnata.</p>
   <p><a class="colophon__su" href="#inizio" data-i18n="z.su">Torna su ↑</a></p>
   <div class="tricolore tricolore--fascia" aria-hidden="true"><i></i><i></i><i></i></div>
 </footer>
@@ -480,5 +546,6 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
   <img id="lightboxImg" src="" alt="">
 </div>
 
+<script src="js/mappa-clic.js?v=1" defer></script>
 </body>
 </html>
